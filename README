@@ -1,0 +1,9 @@
+This class provides pixel-perfect text rendering with full control over typographical font properties.
+
+Setting `lineHeight' or `leading' will affect each other; `lineHeight' is always `capHeight'+`descent'+`leading'. (The two former being unchangable font properties.)
+
+Instances of this class will always manage their own frame size, according to their properties `font', `text', `width', `lineHeight'/`leading', and `kerning'. A resize is issued when any of the mentioned properties are set.
+Setting `width' to a non-zero value will make the object limit its maximal frame width to that value, inserting line-breaks at the correct positions, and growing the frame height accordingly. If the width is more than enough, the object will set its frame width exactly to the given width anyway. See -sizeThatHasWidth:.
+
+-(CGSize)sizeThatFitsWidth:(CGFloat) returns the minimal CGSize the content needs, constrained to the given width and filling the height accordingly.
+-(CGSize)sizeThatHasWidth:(CGFloat) returns a CGSize that has exactly the given width, and the minimal height required for the object's content. This is used for automatic resizing when `width' is non-zero.
