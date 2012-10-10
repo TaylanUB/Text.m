@@ -33,13 +33,14 @@ static const CFRange MyZeroRange = {0, 0};
 
   self.backgroundColor = [UIColor clearColor];
 
-  font = [UIFont systemFontOfSize:17];
   text = @"";
   textColor = [UIColor blackColor];
 
   leading = 3;
 
   width = frame.size.width;
+
+  self.font = [UIFont systemFontOfSize:17];
 
   return self;
 }
