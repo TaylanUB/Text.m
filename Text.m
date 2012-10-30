@@ -219,6 +219,7 @@ static const CFRange MyZeroRange = {0, 0};
   CFRelease(aStr);
 
   [self sizeToFit];
+  [self setNeedsDisplay];
 }
 
 @end
