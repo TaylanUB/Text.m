@@ -14,6 +14,10 @@
 @property (nonatomic, assign) CGFloat leading;
 @property (nonatomic, assign) CGFloat kerning;
 
+@property (nonatomic, readonly) CGFloat capHeight;
+@property (nonatomic, readonly) CGFloat ascent;
+@property (nonatomic, readonly) CGFloat descent;
+
 - (CGSize) sizeThatFitsWidth:(CGFloat)width;
 - (CGSize) sizeThatHasWidth:(CGFloat)width;
 

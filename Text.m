@@ -11,7 +11,6 @@ static const CFRange MyZeroRange = {0, 0};
 @implementation Text
 {
   CTTypesetterRef typesetter;
-  CGFloat capHeight, ascent, descent;
 }
 
 @synthesize font;
@@ -23,6 +22,10 @@ static const CFRange MyZeroRange = {0, 0};
 
 @synthesize leading;
 @synthesize kerning;
+
+@synthesize capHeight;
+@synthesize ascent;
+@synthesize descent;
 
 #pragma mark - Init / Dealloc
 
@@ -115,6 +118,12 @@ static const CFRange MyZeroRange = {0, 0};
 }
 
 #pragma mark - Size Fitting
+
+- (void) sizeToFit
+{
+  [super sizeToFit];
+  [self setNeedsDisplay];
+}
 
 - (CGSize) sizeThatFits:(CGSize)size
 {
@@ -219,7 +228,6 @@ static const CFRange MyZeroRange = {0, 0};
   CFRelease(aStr);
 
   [self sizeToFit];
-  [self setNeedsDisplay];
 }
 
 @end
