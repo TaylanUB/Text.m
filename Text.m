@@ -74,8 +74,12 @@ static const CFRange MyZeroRange = {0, 0};
 
 - (void) setText:(NSString *)_text
 {
-  text = [_text copy];
-  [self makeTypesetter];
+  if (_text) {
+    text = [_text copy];
+    [self makeTypesetter];
+  } else {
+    self.text = @"";
+  }
 }
 
 - (void) setTextAlignment:(UITextAlignment)_textAlignment
