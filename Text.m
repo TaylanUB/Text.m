@@ -29,6 +29,13 @@ static const CFRange MyZeroRange = {0, 0};
 
 #pragma mark - Init / Dealloc
 
++ (Text *) text:(NSString *)text
+{
+  Text *t = [[self alloc] init];
+  t.text = text;
+  return t;
+}
+
 - (id) initWithFrame:(CGRect)frame
 {
   if ( ! (self = [super initWithFrame:frame]) )

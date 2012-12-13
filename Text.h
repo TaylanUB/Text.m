@@ -3,6 +3,8 @@
 
 @interface Text : UIView
 
++ (Text *) text:(NSString *)text;
+
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, assign) UITextAlignment textAlignment;
