@@ -3,7 +3,7 @@
 
 @interface Text : UIView
 
-+ (Text *) text:(NSString *)text;
++ (Text *) textWithText:(NSString *)text;
 
 @property (nonatomic, strong) UIFont *font;
 @property (nonatomic, copy) NSString *text;
