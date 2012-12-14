@@ -29,7 +29,7 @@ static const CFRange MyZeroRange = {0, 0};
 
 #pragma mark - Init / Dealloc
 
-+ (Text *) text:(NSString *)text
++ (Text *) textWithText:(NSString *)text
 {
   Text *t = [[self alloc] init];
   t.text = text;
