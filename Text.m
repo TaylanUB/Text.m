@@ -66,6 +66,9 @@ static const CFRange MyZeroRange = {0, 0};
 
 - (void) setFont:(UIFont *)_font
 {
+  if (_font == nil)
+    [NSException raise:@"You may not set the font to nil." format:nil];
+  
   font = _font;
   {
     CTFontDescriptorRef descriptor = CTFontDescriptorCreateWithNameAndSize((__bridge CFStringRef)font.fontName, font.pointSize);
